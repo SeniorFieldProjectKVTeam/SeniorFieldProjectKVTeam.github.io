@@ -37,13 +37,13 @@
         <h3>
 <a id="brandeis-spring-2016-senior-field-project-knowledgevision-team" class="anchor" href="#brandeis-spring-2016-senior-field-project-knowledgevision-team" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Brandeis Spring 2016 Senior Field Project: KnowledgeVision Team</h3>
 
-<h4>KnowledgeVision Template Designer</h4>
+<h4><a href="https://github.com/SeniorFieldProjectKVTeam/master">KnowledgeVision Template Designer</a></h4>
 <p>Create custom KnowledgeVision templates without needing to know front-end development!</p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Objectives</h3>
 
-<p>Our main objective for this project was to create a tool for KnowledgeVision that allows their customers and non-technical staff to create customized templates without having to cultivate front-end development skills. It would have the additional benefit of decreasing the work the engineers on the team have for creating customized templates for the customers, because it generates HTML and CSS files to work from so they don't have to start from scratch when creating a custom template. This gives the ability to customize templates to customers who want more control over the design of their presentation layout.</p>
+<p>Our main objective for the Spring 2016 Senior Field Project was to create a tool for KnowledgeVision that allows their customers and non-technical staff to create customized templates without the necessity of front-end development skills. It would have the additional benefit of decreasing the work the engineers on the team need to do for creating customized templates for the customers, because it generates HTML and CSS files to work from so they don't have to start from scratch when creating a custom template. This gives the ability to customize templates to customers who want more control over the design of their presentation layout, but who might not have the means to pay for a custom template to be made, allowing KnowledgeVision to reach a broader market.</p>
 
 <h3>Index</h3>
 <ul>
@@ -56,47 +56,58 @@
 	<li><a href="#7">Suggestions For Future Work</a></li>
 	<li><a href="#8">Contributors</a></li>
 	<li><a href="#9">Support or Contact</a></li>
+	<li><a href="#10">Acknowledgements</a></li>
 </ul>
 
 <h3 id="1">General Overview of the Application</h3>
 
-<p>The KnowledgeVision Template Designer is an Electron application that .</p>
+<p>The KnowledgeVision Template Designer is an Electron application featuring a drag and drop user interface. Customization of fonts, font size, and font color is possible as well as background color choice. Customization can be on a component basis or be applied to the whole template. Pre-made themes, which are just design parameters applied to the whole template, can be uploaded and saved. Templates are saved as zip files ready to be uploaded to the KnowledgeVision website.</p>
 
 <p>THIS IS WHAT OUR APPLICATION LOOKS LIKE? INSERT IMAGE HERE once finally finished cleaning it up -lol yolo </p>
+
+<p>The components are grouped into main and bottom components -- as a suggestion to the user for where those components can be dragged (though there are some exceptions including the logo)</p>
+
+<p>1. The comboplayer component is always present, as per the suggestion of the partners.</p>
 
 <h3 id="2">Installation Instructions</h3>
 
 <p>LEAVE INSTALLATION INSTRUCTIONS HERE</p>
 
 <h2 id="3">Project Development Details </h2>
-<h3>Initial Design</h3>
+<h3>Initial Designs</h3>
 <p>First, we explored two alternative design options for the project:</p>
 
+
 <h4>Version 1.a: Drag and Drop</h4>
-
-<p>The drag and drop version of the user interface would have allowed user to design their custom templates by dragging the components from the left  </p>
-
 <img src="1a.png"></img>
+<p>The drag and drop version of the user interface would have allowed user to design their custom templates by dragging available components into the workspace, where the options for customizing the components are available to users when the components are selected.</p>
 
-
-
+<br></br>
 <h4>Version 1.b: <a href="https://github.com/SeniorFieldProjectKVTeam/OtherDocuments/blob/master/KVDesignWizardPrototype1.pptx">Design Wizard-esque</a></h4>
-<p>The design wizard-esque version of the user interface would have guided users through the process of creating the custom template from start to finish.</p>
+
 <img src="1b1.png"></img>
-<p>As the user navigated between the tabs at the top of the interface for the different components of the presentation, choosing to include the component or not, the component would appear in the workspace and the user would have the option to set options for the component such as: background color, primary/secondary color, orientation of the component, font, etc.</p>
+
+<p>The design wizard-esque version of the user interface would have guided users through the process of creating the custom template from start to finish.</p>
 <img src="1b2.png"></img>
-<p></p>
+<p>As the user navigated between the tabs at the top of the interface for the different components of the presentation, choosing to include the component or not, the component would appear in the workspace and the user would have the option to set options for the component such as: background color, primary/secondary color, orientation of the component, font, etc.</p>
 
-<h4>Final Version:</h4>
+<h3><a href="https://github.com/SeniorFieldProjectKVTeam/OtherDocuments/blob/master/kvproto2.pdf">Final Design:</a></h3>
 
-<p>For fhe final design of the UI of the application, we settled on creating the drag-and-drop interface for the Template Designer. There are some differences between the initial version of the drag-and-drop interface and the final one.</p>
+<p>For the final design of the UI of our application, we decided to use a drag-and-drop interface for the Template Designer. There are some differences between the initial version of the drag-and-drop interface and the final one. This design was heavily inspired by the design of the user interface of the <a href="https://www.weebly.com/">Weebly</a> website designer tool. </p>
+
+<img src="final.png"></img>
 
 <ul>
-	<li>1. The comboplayer component is always present.</li>
-	<li>2. The components are grouped into main and bottom components -- as a suggestion to the user for where those components can be dragged (though there are some exceptions including the logo)</li>
+	<li>1. The draggable elements are tiles.</li>
+	<li>2. Theme, is placed its own separate tab.</li>
+	<li>3. When a component is clicked, a new window with the options for customizing the component is revealed.</li>
 </ul>
 
+<img src="final1.png"></img>
 
+<img src="final2.png"></img>
+
+<p>As can be seen above, there was some major deviations from the final design in the final product, based on the feasbility of implementation based on the time available to us during the semester.</p>
 
 <h3 id="4">
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technologies We Used</h3>
@@ -105,7 +116,7 @@
 
 <p>Front-end: 
 	<ul>
-		<li>Javascript (JQuery, Ajax)</li>
+		<li>Javascript (Node, JQuery, Ajax)</li>
 		<li>HTML</li>
 		<li>CSS</li>
 	</ul>
@@ -113,7 +124,7 @@
 
 <h3 id="5">Architecture of Application</h3>
 
-<p>The architecture of the KnowledgeVision Template Designer is: IMAGE HERE?</p>
+<p>The architecture of the KnowledgeVision Template Designer is:</p>
 
 <h3 id="6">
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources We Utilized</h3>
@@ -134,8 +145,8 @@
 
 <p>Websites:
 	<ul>
-		<li><a href="http://stackoverflow.com/">StackOverflow</a></li>
 		<li><a href="http://electron.atom.io">Electron</a></li>
+		<li><a href="http://stackoverflow.com/">StackOverflow</a></li>
 	</ul>
 </p>
 
@@ -143,15 +154,15 @@
 
 <p>For continuing the project, we suggest the following added features to the template designer:</p>
 
-<p>1. resize bug - when the bottom items was added with a very large font size, the bottom box works perfect with the scrolll bar, but fails if you add some to top, it will resize the bottom, therefore the height of the botm-three will change, but the height of the sample won't change, that causes the sample go over the box. The solution we have is simply resize the height of sample when hover, not efficient.</p>
+<p>1. Resize bug - when the bottom items are added with a very large font size, the bottom box works perfect with the scroll bar, but it fails if you add a component to the top, it will resize the bottom, therefore the height of the bottom-three components will change, but the height of the sample won't change, which causes the sample to go past the boundaries of the box. The solution we have is to simply resize the height of sample when hover, which is not efficient.</p>
 
-<p>2. scroll bar - sometimes the scroll bar will appear and decrease the consistency of the whole page.</p>
+<p>2. Scroll bar - sometimes a scroll bar will appear and decrease the consistency of the whole page. We have not been able to diagnose exactly the conditions where this will appear or disappear.</p>
 
-<p>3. sample pictures - some more sample pictures should be done to make it more real, especially the navigation subtitle after click on the switchable button</p>
+<p>3. Sample pictures - some more sample pictures should be used to make the template design process more real, especially the navigation subtitles after clicking on the switchable option button.</p>
 
-<p>4. subtitle modification - subtitle should also be changable separately from the sample body.</p>
+<p>4. Subtitle modification - the subtitles should be changeable separately from the sample body.</p>
 
-<p>5. </p>
+<p>5. Optimize compression of application to decrease application size as much as possible.</p>
 
 <h3 id="8">
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h3>
@@ -166,6 +177,11 @@
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <p>Feel free to make a pull request!</p>
+
+<h3 id="10">Acknowledgements</h3>
+<p>The Brandeis Spring 2016 Senior Field Project KnowledgeVision team would like to extend a big "Thank you!" to Michael Kolowich and Alex Kieft for taking the time to participate in the program and mentor us.</p>
+
+<p>We also thank Pito Salas for his guidance and patience throughout the semester.</p>
       </section>
 
     </div>
