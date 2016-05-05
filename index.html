@@ -112,7 +112,7 @@
 <h3 id="4">
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technologies We Used</h3>
 
-<p><a href="http://electron.atom.io/">Electron</a> - a new way of creating cross-platform applications using web technologies. Uses HTML, CSS, Javascript with Chromium and Node.js to build application. Formerly known as Atom Shell and made by Github.</p>
+<p><a href="http://electron.atom.io/">Electron</a> - a new way of creating cross-platform applications using web technologies. Uses HTML, CSS, Javascript with Chromium and Node.js to build application. Formerly known as Atom Shell and made by Github. As a very new, popular, and currently developing open source technology, the only drawback is that things can get broken or are not well documented, though the latter is improving every day and there is a very active community through the Slack channel.</p>
 
 <p>Front-end: 
 	<ul>
@@ -124,7 +124,11 @@
 
 <h3 id="5">Architecture of Application</h3>
 
-<p>The architecture of the KnowledgeVision Template Designer is:</p>
+<p>The basic architecture of the KnowledgeVision Template Designer is:</p>
+<img src="architecture.png"></img>
+<p>The Electron framework runs on Node.js and Chromium. Through the main.js file is where the main process that creates the main window of the application and determines actions to take in situations such as when the main window is closed. Through the IPC (InterProcess Communication) module, the main process is able to send and receive messages from the renderer process. The renderer process passes messages from the app.js file. In our application, the we create an additional child process in order to run our python script that generates the final template zipfile.</p>
+
+<img src=""> </img>
 
 <h3 id="6">
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources We Utilized</h3>
@@ -152,17 +156,22 @@
 
 <h3 id="7">Suggestions for Future Work</h3>
 
-<p>For continuing the project, we suggest the following added features to the template designer:</p>
+<p>For continuing the project, we suggest the following added features and changes to the KnowledgeVision Template Designer:</p>
 
-<p>1. Resize bug - when the bottom items are added with a very large font size, the bottom box works perfect with the scroll bar, but it fails if you add a component to the top, it will resize the bottom, therefore the height of the bottom-three components will change, but the height of the sample won't change, which causes the sample to go past the boundaries of the box. The solution we have is to simply resize the height of sample when hover, which is not efficient.</p>
+<ul>
+<li>1. Resize bug - when the bottom items are added with a very large font size, the bottom box works perfect with the scroll bar, but it fails if you add a component to the top, it will resize the bottom, therefore the height of the bottom-three components will change, but the height of the sample won't change, which causes the sample to go past the boundaries of the box. The solution we have is to simply resize the height of sample when hover, which is not efficient.</li>
 
-<p>2. Scroll bar - sometimes a scroll bar will appear and decrease the consistency of the whole page. We have not been able to diagnose exactly the conditions where this will appear or disappear.</p>
+<li>2. Scroll bar - sometimes a scroll bar will appear and decrease the consistency of the whole page. We have not been able to diagnose exactly the conditions where this will appear or disappear.</li>
 
-<p>3. Sample pictures - some more sample pictures should be used to make the template design process more real, especially the navigation subtitles after clicking on the switchable option button.</p>
+<li>3. Sample pictures - some more sample pictures should be used to make the template design process more real, especially the navigation subtitles after clicking on the switchable option button.</li>
 
-<p>4. Subtitle modification - the subtitles should be changeable separately from the sample body.</p>
+<li>4. Subtitle modification - the subtitles should be changeable separately from the sample body.</li>
 
-<p>5. Optimize compression of application to decrease application size as much as possible.</p>
+<li>5. Optimize compression of application to decrease application size as much as possible.</li>
+
+<li>6. Improve the UI design so it looks more professional.</li>
+</ul>
+
 
 <h3 id="8">
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h3>
@@ -186,7 +195,5 @@
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-
-	<p>What we need in the online report: Online Report: An attractive mini-web-site that summarizes and describes the project. Think of this as the project brochure or home page. Note: this is describing the project, your process and outcomes, not just the “product” that you created. It should include the objectives, results, code, architecture, designs, user research, academic papers, installations instructions, suggestions for further work, introduction to team members and/or anything else. This should be in the form of a set of web pages published in a public place. I recommend that you use the static pages feature of github and tie it directly to the github account with your technical artifacts.</p>
   </body>
 </html>
