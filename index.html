@@ -63,15 +63,20 @@
 
 <p>The KnowledgeVision Template Designer is an Electron application featuring a drag and drop user interface. Customization of fonts, font size, and font color is possible as well as background color choice. Customization can be on a component basis or be applied to the whole template. Pre-made themes, which are just design parameters applied to the whole template, can be uploaded and saved. Templates are saved as zip files ready to be uploaded to the KnowledgeVision website.</p>
 
-<p>The components are grouped into main and bottom components -- as a suggestion to the user for where those components can be dragged (though there are some exceptions including the logo)</p>
+<p>The components are grouped into main and bottom component, as a suggestion to the user for where those components can be dragged (though there are some exceptions including the logo). The comboplayer component is always present, as per the suggestion of the partners.</p>
 
-<p>1. The comboplayer component is always present, as per the suggestion of the partners.</p>
+<p> The "save themes" button is used to save the theme paramaters into a json file for the ability to use it in the future. The publish button is used to store all the changes you have made for an entire template design, and generate a zip file which can be uploaded to the KnowledgeVision system in order to create the template.</p>
 
 <h3 id="2">Installation Instructions</h3>
 
-<p>After download/clone from the github repo, cd to the master directory and run "npm start", then you can drag and drop to make your preference. Theme button is used to store the theme params into json file and load to reuse it. Pulish button is used to store all the changes you have made and generate a zip file which you can upload to KnowledgeVision system. You definitely can reload the json file call kv.json under the master directory to apply things you made again!</p>
-
-<p></p>
+<ul>
+	<li>1. Install Node.js</li>
+	<li>2. Download/clone the project repository from github, and cd into the master directory</li>
+	<li>3. run "npm install --save-dev electron-prebuilt" in the project folder to install electron</li>
+	<li>4. run "npm install jquery -save" and "npm install jquery-ui -save" in order to get the dependencies on jquery and query UI (and AMD) to work</li>
+	<li>5. run "bower install" to get the right javascript files in bower_components folder</li>
+	<li>6. run "npm start" to fire up the application</li>
+</ul>
 
 <h2 id="3">Project Development Details </h2>
 <h3>Initial Designs</h3>
