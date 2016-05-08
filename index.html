@@ -75,7 +75,6 @@
 <h3>Initial Designs</h3>
 <p>First, we explored two alternative design options for the project:</p>
 
-
 <h4>Version 1.a: Drag and Drop</h4>
 <img src="1a.png"></img>
 <p>The drag and drop version of the user interface would have allowed user to design their custom templates by dragging available components into the workspace, where the options for customizing the components are available to users when the components are selected.</p>
@@ -124,9 +123,7 @@
 
 <p>The basic architecture of the KnowledgeVision Template Designer is:</p>
 <img src="architecture.png"></img>
-<p>The Electron framework runs on Node.js and Chromium. Through the main.js file is where the main process that creates the main window of the application and determines actions to take in situations such as when the main window is closed. Through the IPC (InterProcess Communication) module, the main process is able to send and receive messages from the renderer process. The renderer process passes messages from the app.js file. In our application, the we create an additional child process in order to run our python script that generates the final template zipfile.</p>
-
-<img src=""> </img>
+<p>The Electron framework runs on Node.js and Chromium. The main.js file creates the main process which handles the creation of the main window of the application and determines actions to take in situations such as when the main window is closed. Through the IPC (InterProcess Communication) module, the main process and any other processes are able to send and receive messages between each other. The renderer process passes messages from the app.js file. In our application, we created an additional child process in order to run our python script that generates the final template zipfile.</p>
 
 <h3 id="6">
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources We Utilized</h3>
